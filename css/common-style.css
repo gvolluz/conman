@@ -1,0 +1,63 @@
+/**************** COMMON STYLES *******************/
+
+/* BUTTONS */
+
+/* Loading gif */
+.loading {
+    display: none;
+    padding-top: 2em;
+    clear:both; background:url(../img/loading.gif) center top no-repeat;
+}
+
+.conman-text-button{
+  display: inline;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Georgia;
+  color: #FFF;
+  font-size: 1em;
+  line-height: 1.2em;
+  background: #ae1700;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.conman-text-button:hover {
+  background: #000000;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.conman-button{
+    height: 32px;
+    width: 32px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.conman-button:hover{
+    -webkit-filter: invert(50%); /* chrome, safari */
+    filter: invert(50%); /* firefox */
+    /* NO SOLUTION FOR IE */
+}
+
+.conman-submit{
+    height: 32px;
+    width: 32px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+.conman-submit:hover{
+    -webkit-filter: invert(50%); /* chrome, safari */
+    filter: invert(50%); /* firefox */
+    /* NO SOLUTION FOR IE */
+}
+
+.conman_note{
+  font-size: 0.8em;
+  font-style: italic;
+}
