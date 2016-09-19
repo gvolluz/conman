@@ -8,9 +8,18 @@
 
 /*********** AJAX HELLO ******************/
 
-jQuery(document).ready(function() {
-    jQuery('#conman_hello_button').click(function() { //start function when conman_hello_button button is clicked
-        jQuery.ajax({
+//Handler functions
+function conman_hello_param_message_keypress(e) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 13) { //Enter keycode
+        e.preventDefault();
+        conman_hello();
+        return;
+    }
+}
+
+function conman_hello(){
+    jQuery.ajax({
             type: "post",
             url: CONMANFrontAjax.ajaxurl,
             data: {
@@ -26,7 +35,14 @@ jQuery(document).ready(function() {
                     jQuery("#conman_hello_results").fadeIn("fast"); //animation
                 }
         }); //close jQuery.ajax
+}
 
+//Ready binds
+jQuery(document).ready(function() {
+    jQuery('#conman_hello_button').click(function() { //start function when conman_hello_button button is clicked
+        conman_hello();
         return false;
     });
+
+    jQuery('#conman_hello_param_message').bind("keypress", {}, conman_hello_param_message_keypress);
 });
